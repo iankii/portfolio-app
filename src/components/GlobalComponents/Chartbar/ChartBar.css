@@ -1,0 +1,42 @@
+.SkillContainer {
+  margin: 10px;
+}
+
+.SkillPercentageWrapper {
+  margin: 0 0 5px;
+}
+
+.SkillName {
+
+}
+
+.SkillPercentage {
+  height: 10px;
+  background-color: brown;
+  /* width: 90%; */
+  display: inline-block;
+  margin-right: 10px;
+}
+
+@media screen and (min-width: 601px) {
+  .SkillContainer {
+    display: flex;
+  }
+
+  .SkillName {
+    width: 25%;
+    word-break: break-all;
+  }
+
+  .SkillPercentageWrapper {
+    margin: 10px;
+    width: 80%;
+    margin: 0 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .SkillPercentage {
+
+  }
+}
