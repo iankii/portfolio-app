@@ -11,8 +11,8 @@
 }
 
 .SkillPercentage {
-  height: 10px;
-  background-color: brown;
+  height: 15px;
+  background-color: green;
   /* width: 90%; */
   display: inline-block;
   margin-right: 10px;

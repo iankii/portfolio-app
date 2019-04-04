@@ -1,0 +1,21 @@
+.TutorialsTickets {
+  width: 95%;
+  height: 260px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+
+@media screen and (max-width: 600px) {
+  .TutorialsTickets::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* @media screen and (max-width: 400px) {
+  .TutorialsTicket {
+    width: 100%;
+  }
+} */

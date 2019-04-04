@@ -1,0 +1,31 @@
+.LoginForm {
+
+  display: flex;
+  flex-direction: column;
+  /* width: 500px; */
+  max-width: 500px;
+  min-width: 380px;
+  width: 50%;
+  margin: 50px auto 0;
+  background-color: whitesmoke;
+  padding: 50px;
+}
+
+.FormItem.Button {
+  margin: 10px 0;
+
+}
+
+.Button {
+  height: 50px;
+}
+
+.RegisterLink {
+  margin-left: 15px;
+}
+
+.Register {
+  font-size: 12px;
+  margin: 0;
+  text-align: center;
+}

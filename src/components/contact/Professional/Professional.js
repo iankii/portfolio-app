@@ -6,7 +6,7 @@ import classes from './Professional.css';
 
 const professional = () => {
  return (
-  <div className={classes.Professional}>
+  <div className={classes.Professional} >
     <h2>
       <span className={classes.ProfileIndex}>01 </span>
       <span className="">PROFESSIONAL</span>

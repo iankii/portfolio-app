@@ -12,6 +12,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+/* 
+#root {
+  text-align: center;
+  background-color: red;
+  height: 100vh;
+} */
 
 /* width */
 ::-webkit-scrollbar {

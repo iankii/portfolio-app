@@ -1,12 +1,13 @@
 .Professional {
   margin-top: 50px;
   /* height: 100vh; */
-  color: #ED8D8D;
+  color: white;
   background: #4D4545;
+  background-image: url('./../../../assets/images/prof.webp')
 }
 
 .ProfileIndex , .SkillsHeading {
-  color: gray;
+  color: lightgray;
 }
 
 @media screen and (min-width: 601px) {

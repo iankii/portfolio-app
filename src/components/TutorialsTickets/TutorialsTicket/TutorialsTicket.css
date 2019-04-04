@@ -1,0 +1,26 @@
+.TutorialsTicket {
+  background-color: lightgray;
+  flex: 0 0 auto;
+  width: 32%;
+  margin: 5px;
+}
+
+.TutorialsTicket:first-child {
+  margin-left: 0;
+}
+
+.TutorialsTicket:last-child {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .TutorialsTicket {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .TutorialsTicket {
+    width: 100%;
+  }
+}
