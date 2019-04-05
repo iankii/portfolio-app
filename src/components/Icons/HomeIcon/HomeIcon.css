@@ -1,0 +1,17 @@
+.Root {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.Icon {
+  /* margin: theme.spacing.unit * 2, */
+}
+
+.IconHover {
+  /* margin: theme.spacing.unit * 2, */
+}
+
+/* .IconHover:hover {
+  color: red[800];
+} */

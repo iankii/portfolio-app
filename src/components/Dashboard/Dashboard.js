@@ -3,6 +3,7 @@ import classes from './Dashboard.css';
 
 import TutorialsTickets from './../TutorialsTickets/TutorialsTickets';
 import Logout from '../../components/Logout/Logout';
+import MiniCards from '../MiniCards/MiniCards';
 
 const Dashboard = (props) => {
   return (<div className={classes.Dashboard}>
@@ -13,6 +14,7 @@ const Dashboard = (props) => {
     <div>Resume Builder Add</div>
     <div>blog Preview</div>
     <TutorialsTickets />
+    <MiniCards />
   </div>);
 }
 

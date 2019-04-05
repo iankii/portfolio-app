@@ -9,6 +9,7 @@ import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import Dashboard from './components/Dashboard/Dashboard';
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
+import ResumeBase from './containers/ResumeBase/ResumeBase';
 
 class App extends Component {
   state = {
@@ -39,8 +40,9 @@ class App extends Component {
           <Route path='/contact' component={Contact}/>
           <Route path='/register' component={Register}/>
           <Route path='/login' component={Login}/>
-          <ProtectedRoute authenticated={authenticated} path="/resume" component={Contact} />
+          <ProtectedRoute authenticated={authenticated} path="/resume" component={ResumeBase} />
           <Route
+            exact
             path='/'
             authenticated={authenticated}
             render={(props) => <Dashboard authenticated={authenticated}/> }

@@ -4,7 +4,7 @@ import TutorialsTicket from './TutorialsTicket/TutorialsTicket';
 
 import classes from './TutorialsTickets.css';
 
-var blogs = [{
+var data = [{
   title: 'This is JavaScript tutorial',
   image: '',
   content: 'This is JavaScript tutorialThis is JavaScript tutorialThis is JavaScript tutorialThis is JavaScript tutorialThis is JavaScript tutorialThis is JavaScript tutorialThis is JavaScript tutorialThis is JavaScript tutorialThis is JavaScript tutorialThis is JavaScript tutorialThis is JavaScript tutorialThis is JavaScript tutorialThis is JavaScript tutorialThis is JavaScript tutorialThis is JavaScript tutorialThis is JavaScript tutorialThis is JavaScript tutorialThis is JavaScript tutorial.'
@@ -31,7 +31,7 @@ var blogs = [{
 }];
 
 const TutorialsTickets = () => {
-  var tickets = blogs.map((blog, i) => {
+  var tickets = data.map((blog, i) => {
     return <TutorialsTicket key={i} title={blog.title} content={blog.content.substring(0, 100) + '...'}/>
   });
   return (<div className={classes.TutorialsTickets}>{ tickets }</div>);

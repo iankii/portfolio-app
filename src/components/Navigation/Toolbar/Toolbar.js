@@ -4,14 +4,18 @@ import classes from './Toolbar.css';
 
 import NavigationItems from './../NavigationItems/NavigationItems';
 
-const toolbar = (props) => {
+const toolbar = () => {
  return (
     <header className={classes.Toolbar}>
-      <div>MENU</div>
-
-      <nav>
-        <NavigationItems />
-      </nav>
+      <div className={classes.Logo}>
+        HOME
+      </div>
+      <div className={classes.MiddleNav}>
+        <nav>
+          <NavigationItems />
+        </nav>
+      </div>
+      <div className={classes.MobileActions}></div>
     </header>
  );
 }
