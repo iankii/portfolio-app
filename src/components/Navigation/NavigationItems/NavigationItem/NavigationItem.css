@@ -3,6 +3,16 @@
   height: 55px;
 }
 
+@media (max-width:768px) {
+  .NavigationItem {
+    width: 75%;
+  }
+
+  .NavigationItem a {
+    width: 100%;
+  }
+}
+
 .NavigationItem a {
   font-family: Rubik,Lato,"Lucida Grande","Lucida Sans Unicode",Tahoma,Sans-Serif;
   font-weight: 500;
