@@ -1,7 +1,12 @@
 .Root {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
+  padding: 10px;
+}
+
+.Root svg:hover{
+  color: royalblue;
 }
 
 .Icon {
@@ -12,6 +17,7 @@
   /* margin: theme.spacing.unit * 2, */
 }
 
-/* .IconHover:hover {
-  color: red[800];
-} */
+.Error {
+  color: red;
+}
+

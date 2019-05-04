@@ -8,6 +8,7 @@ const navigationItem = (props) => {
   return (
     <li
       className={(props.classname ? props.classname : classes.NavigationItem) + ' nav-item nav-link'}
+      onClick={props.onChange}
       >
       <NavLink
         exact={props.exact}

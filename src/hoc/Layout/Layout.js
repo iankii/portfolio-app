@@ -6,7 +6,7 @@ import Toolbar from '../../containers/Toolbar/Toolbar';
 
 const layout = ( props ) => (
   <Aux>
-    <Toolbar />
+    <Toolbar {...props}/>
     <main className={Classes.Content}>
       {props.children}
     </main>

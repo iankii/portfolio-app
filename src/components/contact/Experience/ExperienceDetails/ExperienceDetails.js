@@ -7,8 +7,8 @@ const expDetails = (props) => {
         <h2>{props.year}</h2>
         <h3>{props.company}</h3>
         <div className="work-details">
-          <span className="work-designation">{props.designation}</span>
-          <span className="work-details">{props.description}</span>
+          <em className="work-designation">{props.designation}</em>
+          <p className="work-details">{props.description}</p>
         </div>
         <div className="technologies">
           <span className="technologies-details"><b>Tools/Technologies Used:</b> {props.technologies}</span>

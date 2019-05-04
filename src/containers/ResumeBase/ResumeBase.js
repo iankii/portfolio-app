@@ -8,7 +8,7 @@ class ResumeBase extends Component {
   render() {
     return (
       <div className={classes.ResumeBase}>
-        <h1>Hi, I'm a react ResumeBase!</h1>
+        <h1>Hang on mate...Working on it!!!</h1>
         <ResumenNav />
       </div>
     );

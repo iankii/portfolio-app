@@ -17,10 +17,20 @@
   color: white;
 }
 
+.Navbar {
+  
+}
+
 @media (max-width: 768px) {
+  /* .Navbar.Hidden {
+    position: absolute;
+    z-index: -1;
+  } */
+
   .Hidden {
     display: none;
     opacity: 0;
+    z-index: -100;
   }
 
   .Toolbar nav ul {
@@ -42,7 +52,13 @@
     height: calc(100vh - 100px);
     width: 100vw;
   }
+
+  .Toolbar .NavbarMobile form {
+    display: none;
+  }
 }
+
+
 /* .MiddleNav {
   flex: 1;
 } */
@@ -57,7 +73,7 @@
   background: #100e17;
   border-bottom: 1px solid #201c29;
   -webkit-animation: none;
-  justify-content: space-between;
+  justify-content: flex-end;
   
 }
 
@@ -67,7 +83,7 @@
     width: 75%;
   }
 
-  .customToggler {
+  .customToggler, .Toolbar .SearchIcon {
     display: none;
   }
 }

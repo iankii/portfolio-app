@@ -1,9 +1,26 @@
+.FormContainer {
+  padding: 10px;
+  /* min-height: calc(100vh - 100px); */
+  display: flex;
+}
+
+.LoginFormContainer {
+  width: 55%;
+  max-width: 600px;
+  justify-content: center;
+  padding: 10px;
+  /* min-height: calc(100vh - 100px); */
+  display: flex;
+  align-items: center;
+}
+
 .LoginForm {
   display: flex;
   flex-direction: column;
   /* width: 500px; */
-  max-width: 500px;
-  width: 50%;
+  max-width: 700px;
+  min-width: 300px;
+  width: 70%;
   margin: auto;
   padding: 50px;
   background: lightgray;
@@ -27,16 +44,150 @@
   text-align: center;
 }
 
-@media screen and (max-width: 600px) {
-  .LoginForm {
-    width: 330px;
-    padding: 30px;
-  } 
+.LoginDivider {
+  width: 0%;
+  position: relative;
+}
+
+.Bar {
+  width: 2px;
+  height: 41%;
+  width: 2px;
+  position: absolute;
+  background: #9ca0b1;
+  left: -1px;
+}
+
+.BarTop {
+  top: 0;
+}
+
+.LoginOr {
+  position: absolute;
+  display: block;
+  width: 46px;
+  height: 18%;
+  left: -23px;
+  border: 2px solid #9ca0b1;
+  top: 41%;
+  text-align: center;
+  display: flex;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  line-height: 30px;
+  color: #b8bbc8;
+}
+
+.BarBottom {
+  bottom: 0;
+}
+
+.OtherLogins {
+  width: 30%;
+  margin-left: 30px;
+}
+
+.LoginSocialButtons, .OtherLogins, .FormContainer {
+  display: flex;
+  justify-content: center;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+}
+
+.LoginSocialButtons .SocialIcon {
+  padding: 30px;
+  font-size: 4em;
+}
+
+.Google {
+
+}
+
+.Facebook {
+
+}
+
+.Git {
+
+}
+
+.LinkedIn {
+
+}
+
+@media screen and (min-width: 768px) {
+  LoginSocialButtons {
+    max-width: 400px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .FormContainer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .OtherLogins {
+    margin: 0;
+    width: 100%;
+  }
+
+  .LoginSocialButtons {
+    flex-wrap: nowrap;
+  }
+
+  .LoginDivider {
+    width: 100%;
+    position: relative;
+    height: 14px;
+    margin-top: 20px;
+  }
+
+  .Bar {
+    width: 41%;
+    height: 2px;
+    position: absolute;
+    background: #9ca0b1;
+  }
+
+  .BarTop {
+    left: 0;
+  }
+
+  .LoginOr {
+    width: 18%;
+    height: 30px;
+    left: 41%;
+    top: -15px;
+  }
+
+  .BarBottom {
+    right: 0;
+    left: auto;
+    top: 0;
+  }
 }
 
 @media screen and (max-width: 400px) {
+
   .LoginForm {
-    width: 260px;
+    width: 330px;
+    padding: 30px;
+  }
+
+  .LoginSocialButtons .SocialIcon {
     padding: 20px;
-  } 
+    font-size: 3em;
+  }
+}
+
+@media screen and (max-width: 400px) {
+/*   
+  .LoginSocialButtons .SocialIcon {
+    padding: 10px;
+    font-size: 2em;
+  } */
 }

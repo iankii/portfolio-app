@@ -35,7 +35,7 @@ class App extends Component {
     var authenticated = this.state.authenticated;
 
     return (
-      <Layout >
+      <Layout authenticated={authenticated}>
         <Switch>
           <Route path='/contact' component={Contact}/>
           <Route path='/register' component={Register}/>
