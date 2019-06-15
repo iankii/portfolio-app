@@ -11,6 +11,8 @@ import Dashboard from './components/Dashboard/Dashboard';
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
 import ResumeBase from './containers/ResumeBase/ResumeBase';
 
+import './App.css';
+
 class App extends Component {
   state = {
     authenticated: false,

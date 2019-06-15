@@ -8,9 +8,13 @@ import firebase from './../../firebase';
 import { TextField, Button, InputAdornment, IconButton } from '@material-ui/core/';
 import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
-
+import OtherLogins from './OtherLogins';
 import classes from './Login.css';
 // import './Login.css';
+
+import {loginWithGoogle} from "../../helpers/auth";
+
+const firebaseAuthKey = "firebaseAuthInProgress";
 
 class Login extends Component {
   state = {
@@ -42,6 +46,15 @@ class Login extends Component {
         this.setState({ error: error });
       });
   };
+
+  handleGoogleLogin = () => {
+    loginWithGoogle()
+      .catch(function (error) {
+        alert(error); // or show toast
+        localStorage.removeItem(firebaseAuthKey);
+      });
+    localStorage.setItem(firebaseAuthKey, "1");
+  }
 
   render() {
     var { error } = this.state;
@@ -94,7 +107,7 @@ class Login extends Component {
               Login
       </Button>
             {error ? (
-              <p>
+              <p className={classes.Error}>
                 {error.message}
               </p>
             ) : null}
@@ -108,15 +121,7 @@ class Login extends Component {
           <span className={classes.LoginOr}>OR</span>
           <div className={classes.Bar + ' ' + classes.BarBottom}></div>
         </div>
-        <div className={classes.OtherLogins}>
-          <div className="SocialAuthErrors" id="login-social-auth-errors"></div>
-          <div className={classes.LoginSocialButtons}>
-            <i className={classes.SocialIcon + ' ' + classes.Google + " fa fa-google"}></i>
-            <i className={classes.SocialIcon + ' ' + classes.Facebook + " fa fa-facebook"}></i>
-            <i className={classes.SocialIcon + ' ' + classes.Git + " fa fa-github-alt"}></i>
-            <i className={classes.SocialIcon + ' ' + classes.LinkedIn + " fa fa-linkedin"}></i>
-          </div>
-        </div>
+        <OtherLogins handleGoogleLogin={this.handleGoogleLogin}/>
       </div>
     );
   };

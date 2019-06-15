@@ -1,12 +1,13 @@
 import React from 'react';
-import firebase from 'firebase';
+import { logout } from "./../../helpers/auth";
+
 
 import MaterialIcon from './../Icons/MaterialIcon/MaterialIcon';
 
 import classes from './Logout.css';
 
 const logOutUser = (props) => {
-  firebase.auth().signOut();
+  logout();
 };
 
 const LogOut = (props) => {
