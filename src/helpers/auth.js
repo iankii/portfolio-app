@@ -1,6 +1,7 @@
 import { firebaseAuth, googleProvider } from "../firebase";
 
 export function loginWithGoogle() {
+    console.log(googleProvider)
     return firebaseAuth().signInWithRedirect(googleProvider);
     //return authenticate(loginWithFirebase(googleProvider));
 }
@@ -51,6 +52,7 @@ export function loginWithGoogle() {
 //      });
 //      */
 // }
+
 
 export function logout() {
     return firebaseAuth().signOut();

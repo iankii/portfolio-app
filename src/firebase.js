@@ -1,7 +1,7 @@
 import firebase from 'firebase';
 
 const config = {
-  authDomain: "https://portfolio-app-5ad6d.firebaseapp.com",
+  authDomain: "portfolio-app-5ad6d.firebaseapp.com",
   apiKey: 'AIzaSyCseKHO63vj1ieKIgmpopb8Rau0ka5b_Lw',
   projectId: 'portfolio-app-5ad6d',
   storageBucket: '',
