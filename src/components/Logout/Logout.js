@@ -1,13 +1,20 @@
 import React from 'react';
-import { logout } from "./../../helpers/auth";
+import { doSignOut } from "./../../helpers/auth";
 
 
 import MaterialIcon from './../Icons/MaterialIcon/MaterialIcon';
 
 import classes from './Logout.css';
 
+const appTokenKey = "appToken";
+
 const logOutUser = (props) => {
-  logout();
+  doSignOut()
+    .then(() => {
+      console.log('logout!!!');
+      localStorage.setItem(appTokenKey, null);
+    });
+
 };
 
 const LogOut = (props) => {

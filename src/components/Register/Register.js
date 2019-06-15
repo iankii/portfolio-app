@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
-import firebase from './../../firebase';
-// import PropTypes from 'prop-types';
-// import classNames from 'classnames';
-// import { withStyles } from '@material-ui/core/styles';
-// import MenuItem from '@material-ui/core/MenuItem';
+import { doCreateUserWithEmailAndPassword } from './../../helpers/auth'
 import { TextField, Button, InputAdornment, IconButton } from '@material-ui/core/';
 import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
@@ -33,9 +29,7 @@ class Register extends Component {
     event.preventDefault();
     const { email, password } = this.state;
 
-    firebase
-      .auth()
-      .createUserWithEmailAndPassword(email, password)
+    doCreateUserWithEmailAndPassword(email, password)
       .then((user) => {
         this.props.history.push('/');
       })
@@ -94,7 +88,7 @@ class Register extends Component {
           </Button>
 
         {error ? (
-          <p>
+          <p className={classes.Error}>
             {error.message}
           </p>
         ) : null}

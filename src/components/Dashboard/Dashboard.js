@@ -9,8 +9,6 @@ import MiniCards from '../MiniCards/MiniCards';
 const Dashboard = (props) => {
   return (<div className={classes.Dashboard}>
     <h1>Hi, I'm a react Dashboard!</h1>
-
-
     <div>Resume Builder Add</div>
     <div>blog Preview</div>
     <TutorialsTickets />

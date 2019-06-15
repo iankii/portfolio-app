@@ -9,6 +9,10 @@
   background: lightgray;
 }
 
+.Error {
+  color: red;
+}
+
 .FormItem.Button {
   margin: 10px 0;
 
