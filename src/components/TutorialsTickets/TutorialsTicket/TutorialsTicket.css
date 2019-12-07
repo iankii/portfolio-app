@@ -1,8 +1,15 @@
 .TutorialsTicket {
-  background-color: gray;
-  flex: 0 0 auto;
-  width: 32%;
-  margin: 5px;
+    background: #201c29;
+    border: 1px solid #312d3c;
+    box-shadow: 0 4px 80px #000;
+    min-width: 100%;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    flex-basis: calc(559440px - 99900%);
+    display: -webkit-box;
+    display: flex;
+    margin: .5rem;
+    border-radius: 8px;
 }
 
 .TutorialsTicket:first-child {
@@ -15,11 +22,9 @@
 
 @media screen and (max-width: 600px) {
   .TutorialsTicket {
-    width: 50%;
+    height: 200px;
   }
-}
 
-@media screen and (max-width: 400px) {
   .TutorialsTicket {
     width: 100%;
   }

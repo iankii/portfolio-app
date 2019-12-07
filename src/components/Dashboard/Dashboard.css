@@ -3,3 +3,14 @@
   flex-direction: column;
   align-items: center;
 }
+
+.dashboard-header {
+  font-family: fantasy;
+  text-align: center;
+}
+
+.ResumeBuilderLink {
+  font-size: 25px;
+  padding: 5px;
+  margin: 15px 0;
+}
