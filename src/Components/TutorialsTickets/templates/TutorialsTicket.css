@@ -10,6 +10,7 @@
     display: flex;
     margin: .5rem;
     border-radius: 8px;
+    height: 200px;
 }
 
 .TutorialsTicket:first-child {
@@ -22,10 +23,12 @@
 
 @media screen and (max-width: 600px) {
   .TutorialsTicket {
-    height: 200px;
-  }
-
-  .TutorialsTicket {
     width: 100%;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .TutorialsTicket {
+    min-width: 49%;
   }
 }
