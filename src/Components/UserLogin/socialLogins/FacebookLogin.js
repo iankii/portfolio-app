@@ -1,7 +1,8 @@
 import React from 'react';
 import classes from "../OtherLogins.css";
 
-import { doSignInWithFacebook, firebaseAuthKey } from "../../../helpers/auth";
+import { doSignInWithFacebook } from "../../../helpers/auth";
+// import { doSignInWithFacebook, firebaseAuthKey } from "../../../helpers/auth";
 
 const handleFacebookLogin = () => {
   doSignInWithFacebook()

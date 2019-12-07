@@ -1,5 +1,10 @@
-import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+const Routes = {
+  'CONTACT': '/contact',
+  'REGISTER': '/register',
+  'LOGIN': '/login',
+  'PROFILE': '/profile',
+  'CREATE_PROFILE': '/create-profile'
+};
 
 // import MyProfile from '../app-modules/my-profile/index';
 // import Login from '../app-modules/user-login/Login';
@@ -9,14 +14,6 @@ import { Route, Switch } from 'react-router-dom';
 // import Profile from '../app-modules/user-profile/Profile';
 
 // import ProtectedRoute from '../hoc/ProtectedRoute/ProtectedRoute';
-
-const Routes = {
-  'CONTACT': '/contact',
-  'REGISTER': '/register',
-  'LOGIN': '/login',
-  'PROFILE': '/profile',
-  'CREATE_PROFILE': '/create-profile'
-};
 
 // const Routes = (props) => {
 //   const authenticated = props.authenticated;

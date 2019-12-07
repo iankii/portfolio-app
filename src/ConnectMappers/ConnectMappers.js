@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Mappers = {
   mapDispatchToProps (dispatch, ownProps) {
     return {
