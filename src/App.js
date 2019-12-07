@@ -4,15 +4,15 @@ import { withRouter, Route, Switch } from 'react-router-dom';
 
 import firebase from './firebase';
 
-import Layout from './hoc/Layout/Layout';
+import Layout from './hoc/Layout';
 
 import MyProfile from './Components/MyProfile/index';
 import Login from './Components/UserLogin/Login';
-import Register from './Components/UserRegisteration/Register';
+import Register from './Components/UserRegisteration/index';
 import Dashboard from './Components/Dashboard/index';
 import ProtectedRoute from './hoc/ProtectedRoute/ProtectedRoute';
-import ProfileCreater from './Components/ProfileCreater/ProfileCreater';
-import Profile from './Components/UserProfile/Profile';
+import ProfileCreater from './Components/ProfileCreater/index';
+import Profile from './Components/UserProfile/index';
 import Mappers from "./ConnectMappers/ConnectMappers";
 
 import './App.css';

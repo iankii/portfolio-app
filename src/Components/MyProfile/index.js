@@ -1,8 +1,8 @@
 import React from 'react';
 
-import AboutMe from './AboutMe/AboutMe';
-import Professional from './Professional/Professional';
-import Experience from './Experience/Experience';
+import AboutMe from './templates/AboutMe';
+import Professional from './templates/Professional';
+import Experience from './templates/Experience';
 
 import classes from './index.css';
 

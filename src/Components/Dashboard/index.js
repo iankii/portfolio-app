@@ -4,8 +4,8 @@ import { NavLink } from 'react-router-dom';
 
 import classes from './index.css';
 
-import TutorialsTickets from '../TutorialsTickets/TutorialsTickets';
-import MiniCards from '../MiniCards/MiniCards';
+import TutorialsTickets from '../TutorialsTickets/index';
+import MiniCards from '../MiniCards/index';
 import DashboardHeader from "./templates/dashboardHeader";
 
 // {props.authenticated ? <h1> authenticated</h1> : <h1>not authenticated</h1>}
