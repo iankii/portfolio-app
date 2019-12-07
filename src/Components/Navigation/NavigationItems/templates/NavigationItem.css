@@ -1,0 +1,42 @@
+.NavigationItem {
+  flex: 1;
+  height: 55px;
+}
+
+@media (max-width:768px) {
+  .NavigationItem {
+    width: 75%;
+  }
+
+  .NavigationItem a {
+    width: 100%;
+  }
+}
+
+.NavigationItem a {
+  font-family: Rubik,Lato,"Lucida Grande","Lucida Sans Unicode",Tahoma,Sans-Serif;
+  font-weight: 500;
+  font-size: .8rem;
+  color: #fff;
+  padding: .5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-right: 1px solid #201c29;
+  transition: .1s;
+  height: 100%;
+}
+
+.NavigationItem:first-child a {
+  border-left: 1px solid #201c29;
+}
+
+.NavigationItem a:hover,
+.NavigationItem a:active,
+.NavigationItem a.active {
+  border-bottom: 4px solid #40A4C8;
+  -webkit-text-fill-color: #fff;
+  background: #201c29;
+}

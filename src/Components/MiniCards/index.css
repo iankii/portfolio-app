@@ -1,0 +1,123 @@
+.MiniCard {
+  min-width: 300px;
+  min-height: 350px;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: #17141d;
+  -webkit-box-shadow: -1rem 0 3rem #000;
+  box-shadow: -1rem 0 3rem #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-transition: .2s;
+  transition: .2s;
+  margin: 0;
+}
+
+.MiniCard:hover {
+    -webkit-transform: translate(0,-1rem);
+    transform: translate(0,-1rem);
+}
+
+.MiniCards {
+  box-sizing: content-box;
+  display: flex;
+  width: calc(100vw - 71px);
+  margin: 0 0 5rem 0;
+}
+
+.MiniCardsHeader {
+  background-image: linear-gradient(to top,#6ae2f1,#f19040);
+  position: relative;
+  border-radius: 16px;
+  padding: 2rem;
+  /* margin: 0 4rem 0 0; */
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  flex: 0 0 320px;
+  margin: 3rem 0;
+}
+
+.MiniCardsContainer {
+  scrollbar-color: #201c29;
+  scrollbar-width: 10px;
+  scrollbar-gutter: always;
+  padding: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 600px) {
+  .MiniCardsContainer {
+    padding: 3rem 1.5rem 0;
+  }
+
+  .MiniCardsHeader {
+    margin: 3rem 0 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .MiniCardsContainer {
+      overflow-x: visible;
+  }
+}
+
+@media (max-width: 1200px) {
+  .MiniCards::-webkit-scrollbar  {
+    width: 0 !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .MiniCards {
+    width: 100%;
+    padding-left: 0;
+    padding-bottom: 2rem;
+    /* margin-bottom: 6rem; */
+    scrollbar-color: #201c29;
+    scrollbar-width: 10px;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    -ms-scroll-snap-points-x: repeat(250px);
+    scroll-snap-points-x: repeat(250px);
+    -ms-scroll-snap-type: mandatory;
+    scroll-snap-type: mandatory;
+  }
+}
+
+@media (max-width: 1200px) {
+  .MiniCardsHeader {
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    -webkit-box-flex: 0;
+    -ms-flex: 0;
+    flex: 0;
+    width: 110px;
+    margin-right: 1rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .MiniCard {
+      min-width: 220px;
+      scroll-snap-align: start;
+  }
+}
+
+@media (max-width: 600px) {
+  .MiniCard {
+    min-width: 115px;
+  }
+}

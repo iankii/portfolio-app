@@ -1,0 +1,6 @@
+.Content {
+  /* background-color: whitesmoke; */
+  background: #100e17;
+  color: white;
+  min-height: calc(100vh - 100px);
+}
