@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 
-import classes from './Dashboard.css';
+import classes from './index.css';
 
 import TutorialsTickets from '../TutorialsTickets/TutorialsTickets';
 import MiniCards from '../MiniCards/MiniCards';
