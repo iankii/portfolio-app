@@ -9,7 +9,7 @@ import Layout from './hoc/Layout/Layout';
 import MyProfile from './Components/MyProfile/index';
 import Login from './Components/UserLogin/Login';
 import Register from './Components/UserRegisteration/Register';
-import Dashboard from './Components/Dashboard/Dashboard';
+import Dashboard from './Components/Dashboard/index';
 import ProtectedRoute from './hoc/ProtectedRoute/ProtectedRoute';
 import ProfileCreater from './Components/ProfileCreater/ProfileCreater';
 import Profile from './Components/UserProfile/Profile';
