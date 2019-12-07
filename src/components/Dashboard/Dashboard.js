@@ -1,21 +1,30 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { NavLink } from 'react-router-dom';
+
 import classes from './Dashboard.css';
 
-import TutorialsTickets from './../TutorialsTickets/TutorialsTickets';
-// import Logout from '../../components/Logout/Logout';
+import TutorialsTickets from '../TutorialsTickets/TutorialsTickets';
 import MiniCards from '../MiniCards/MiniCards';
+import DashboardHeader from "./templates/dashboardHeader";
 
-// {props.authenticated ? <Logout /> : null}
+// {props.authenticated ? <h1> authenticated</h1> : <h1>not authenticated</h1>}
 const Dashboard = (props) => {
   return (<div className={classes.Dashboard}>
-    <h1>Hi, I'm a react Dashboard!</h1>
-
-
-    <div>Resume Builder Add</div>
-    <div>blog Preview</div>
+    <DashboardHeader />
     <TutorialsTickets />
+    <div className={classes.ResumeBuilderLink}>
+      <NavLink exact={props.exact} to='/create-profile' activeClassName={classes.active}>Checkout our Resume</NavLink>
+    </div>
     <MiniCards />
   </div>);
 }
 
-export default Dashboard;
+const mapStateToProps = (state, ownProps) => {
+  return {
+    authenticated: state.commonReducer.authenticated
+  }
+}
+
+export default connect(mapStateToProps)(Dashboard);
+// export default Dashboard;

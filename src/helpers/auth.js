@@ -1,9 +1,17 @@
-import { firebaseAuth, googleProvider } from "../firebase";
+import { firebaseAuth, googleProvider, facebookProvider } from "../firebase";
 
-export function loginWithGoogle() {
-    console.log(googleProvider)
-    return firebaseAuth().signInWithRedirect(googleProvider);
-    //return authenticate(loginWithFirebase(googleProvider));
+export const firebaseAuthKey = "firebaseAuthInProgress";
+export const appTokenKey = "appToken";
+
+// export function loginWithGoogle() {
+//     return firebaseAuth().signInWithRedirect(googleProvider);
+// }
+
+export function loginWithFacebook() {
+    return firebaseAuth().signInWithRedirect(facebookProvider);
+}
+
+export function loginWithLinkedIn() {
 }
 
 
@@ -54,6 +62,18 @@ export function loginWithGoogle() {
 // }
 
 
-export function logout() {
-    return firebaseAuth().signOut();
-}
+export const doCreateUserWithEmailAndPassword = (email, password) =>
+    firebaseAuth().createUserWithEmailAndPassword(email, password);
+
+export const  doSignInWithEmailAndPassword = (email, password) =>
+    firebaseAuth().signInWithEmailAndPassword(email, password);
+
+export const  doSignInWithGoogle = () =>
+    firebaseAuth().signInWithPopup(googleProvider);
+
+export const doSignInWithFacebook = () =>
+    firebaseAuth().signInWithPopup(facebookProvider);
+
+export const doSignOut = () => firebaseAuth().signOut();
+
+export const onAuthStateChanged = (callback) => firebaseAuth().onAuthStateChanged(callback);

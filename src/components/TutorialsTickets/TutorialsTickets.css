@@ -1,16 +1,27 @@
 .TutorialsTickets {
-  width: 95%;
-  height: 260px;
-  padding: 10px;
-  display: flex;
+  width: 96%;
   flex-wrap: nowrap;
   overflow-x: auto;
+  overflow-y: hidden;
+  border-radius: 16px;
+  background: #17141d;
+  -webkit-box-shadow: -1rem 0 3rem #000;
+  box-shadow: -1rem 0 3rem #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-transition: .2s;
+  transition: .2s;
+  margin: 0;
 }
 
 
 @media screen and (max-width: 600px) {
   .TutorialsTickets::-webkit-scrollbar {
     display: none;
+    height: 200px;
   }
 }
 

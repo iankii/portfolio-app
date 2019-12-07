@@ -28,7 +28,6 @@
   display: flex;
   width: calc(100vw - 71px);
   margin: 0 0 5rem 0;
-  padding: 2rem 0;
 }
 
 .MiniCardsHeader {
@@ -58,7 +57,11 @@
 
 @media (max-width: 600px) {
   .MiniCardsContainer {
-    padding: 3rem 1.5rem;
+    padding: 3rem 1.5rem 0;
+  }
+
+  .MiniCardsHeader {
+    margin: 3rem 0 0;
   }
 }
 
@@ -69,11 +72,17 @@
 }
 
 @media (max-width: 1200px) {
+  .MiniCards::-webkit-scrollbar  {
+    width: 0 !important;
+  }
+}
+
+@media (max-width: 1200px) {
   .MiniCards {
     width: 100%;
     padding-left: 0;
     padding-bottom: 2rem;
-    margin-bottom: 6rem;
+    /* margin-bottom: 6rem; */
     scrollbar-color: #201c29;
     scrollbar-width: 10px;
     overflow-x: scroll;

@@ -1,16 +1,15 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
-import Aux from '../Auxl/Auxl';
 import Classes from './Layout.css';
-import Toolbar from '../../containers/Toolbar/Toolbar';
+import Toolbar from '../../Components/Toolbar/Toolbar';
 
-const layout = ( props ) => (
-  <Aux>
+const layout = (props) => (
+  <Fragment>
     <Toolbar {...props}/>
     <main className={Classes.Content}>
       {props.children}
     </main>
-  </Aux>
+  </Fragment>
 )
 
 export default layout;
