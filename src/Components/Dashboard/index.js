@@ -14,7 +14,7 @@ const Dashboard = (props) => {
     <DashboardHeader />
     <TutorialsTickets />
     <div className={classes.ResumeBuilderLink}>
-      <NavLink exact={props.exact} to='/create-profile' activeClassName={classes.active}>Checkout our Resume Builder!</NavLink>
+      <NavLink exact={props.exact} to='/create-profile' activeClassName={classes.active}>Checkout our Resume Builder!!!</NavLink>
     </div>
     <MiniCards />
   </div>);
