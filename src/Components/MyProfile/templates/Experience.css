@@ -3,7 +3,15 @@
 }
 
 .Experience {
-  margin-top: 50px;
+  /* margin-top: 50px; */
+  padding-top: 50px;
+  background-image: url('./../../../assets/images/exp.jpg');
+  position: relative;
+  opacity: 0.9;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .ExperienceTittle {
@@ -37,8 +45,22 @@ body {
   bottom: 0;
   left: 50%;
   margin-left: -3px;
+  /* for animation */
+	transition:2s;
+	-webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-transform: translate3d(0,0,0);
+  /* or */
+  -webkit-transform: translateZ(0);
 }
 
+.AnimateHeightFull::after {
+  height: 100%;
+}
+
+.AnimateHeightZero::after {
+  height: 0%;
+}
 /* Container around content */
 .Container {
   padding: 10px 40px;
@@ -115,13 +137,13 @@ body {
 /* Media queries - Responsive Timeline on screens less than 600px wide */
 @media screen and (max-width: 600px) {
   .Experience {
-    margin-top: 50px;
-    padding: 10px 10px 20px;
+    /* margin-top: 50px; */
+    padding: 60px 10px 20px;
   }
 
   /* Place the timelime to the left */
   .Timeline::after {
-    left: 31px;
+    left: 28px;
   }
   
   /* Full-width Containers */

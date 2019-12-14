@@ -4,3 +4,4 @@ database.rules.json
 firebase.json
 .firebase
 node_modules
+build
