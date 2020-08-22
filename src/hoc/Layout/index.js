@@ -1,9 +1,8 @@
-import React, { Fragment, Component } from 'react';
+import React, { Component } from 'react';
 
 import Classes from './index.css';
 import Toolbar from '../../Components/Toolbar/index';
 import ProfileOverview from './../../Components/ProfileOverview';
-import { render } from 'react-dom';
 
 class Layout extends Component {
   constructor(props) {
