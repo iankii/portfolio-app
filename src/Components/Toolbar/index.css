@@ -74,6 +74,7 @@
   border-bottom: 1px solid #201c29;
   -webkit-animation: none;
   justify-content: flex-end;
+  border-radius: 40px 40px 0 0;
   
 }
 
