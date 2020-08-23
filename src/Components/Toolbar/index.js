@@ -2,8 +2,9 @@ import React, {useState} from 'react';
 
 import NavigationItems from "../Navigation/NavigationItems/index";
 import MaterialIcon from '../../UtilityComponents/Icons/MaterialIcon/MaterialIcon';
-import Logout from '../UserLogout/index';
 
+import Logout from '../UserLogout/index';
+import Avatar from './../Avatar';
 import classes from './index.css';
 
 function Toolbar (props) {
@@ -18,6 +19,7 @@ function Toolbar (props) {
   return (
     <header className={classes.Toolbar}>
       <nav className={`${classes.Navbar} ${isHidden} navbar navbar-expand-md navbar-collapse`} id="navbarSupportedContent">
+        <Avatar src="/broken-image.jpg" />
         <NavigationItems onChange={toggleNav} />
       </nav>
 
