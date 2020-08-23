@@ -8,15 +8,22 @@
 .Container {
   position: relative;
   left: 0%;
-  top: 60px;
+  /* top: 60px; */
   transition: all 1s ease-in-out;
   -webkit-transition: all 1s ease-in-out; /** Chrome & Safari **/
   -moz-transition: all 1s ease-in-out; /** Firefox **/
   -o-transition: all 1s ease-in-out; /** Opera **/
-  height: calc(100vh - 60px);
+  height: calc(100vh - 0px);
   overflow-y: scroll;
 }
 
 ::-webkit-scrollbar {
   width: 0px;
+}
+
+.Root {
+  position: absolute;
+  overflow: hidden;
+  max-width: -webkit-fill-available;
+  max-height: -webkit-fill-available;
 }

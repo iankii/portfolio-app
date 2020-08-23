@@ -20,14 +20,16 @@ class Layout extends Component {
   
   render() {
     const ContainerStyle = {
-      left: this.state.showOverview ? '60%' : '0%',
+      left: this.state.showOverview ? '75%' : '0%',
+      'border-radius': this.state.showOverview ? '40px' : '0',
+      transform: `scale(${this.state.showOverview ? .85 : 1})`
     };
     return(
-      <div>
+      <div className={Classes.Root}>
         <ProfileOverview showOverview={this.state.showOverview} />
         <div className={Classes.Container} style={ContainerStyle}>
+          <Toolbar {...this.props} />
           <button onClick={this.toggleHandler}>test</button>
-          <Toolbar {...this.props} showOverview={this.state.showOverview} />
           <main className={Classes.Content}>
             {this.props.children}
           </main>
