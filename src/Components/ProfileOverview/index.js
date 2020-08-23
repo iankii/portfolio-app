@@ -10,7 +10,7 @@ const ProfileOverview = (props) => {
 
   return (
     <div className={Classes.Root} style={style}>
-      Learning on the go…
+      Profile Details will come here
     </div>
   );
 }

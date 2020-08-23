@@ -28,8 +28,7 @@ class Layout extends Component {
       <div className={Classes.Root}>
         <ProfileOverview showOverview={this.state.showOverview} />
         <div className={Classes.Container} style={ContainerStyle}>
-          <Toolbar {...this.props} />
-          <button onClick={this.toggleHandler}>test</button>
+          <Toolbar {...this.props} profileOverviewToggle={this.toggleHandler} />
           <main className={Classes.Content}>
             {this.props.children}
           </main>

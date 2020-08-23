@@ -1,16 +1,13 @@
 import React from 'react';
 import Avatar from '@material-ui/core/Avatar';
+import DefaulImage from './../../assets/images/DefaultAvatar.PNG';
 
 import Classes from './index.css';
 
 function AvatarIcon() {
   return (
     <div className={Classes.Avatar}>
-      {/* <Avatar alt="Remy Sharp" src="/broken-image.jpg" className={classes.orange}>
-        B
-      </Avatar>
-      <Avatar alt="Remy Sharp" src="/broken-image.jpg" className={classes.orange} /> */}
-      <Avatar src="/broken-image.jpg" />
+      <Avatar src={DefaulImage} />
     </div>
   );
 }

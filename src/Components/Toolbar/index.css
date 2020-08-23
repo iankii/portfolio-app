@@ -21,6 +21,13 @@
   
 }
 
+.NoButton {
+  padding: 0px;
+  margin: 0;
+  background: none;
+  border: 0;
+}
+
 @media (max-width: 600px) {
   /* .Navbar.Hidden {
     position: absolute;

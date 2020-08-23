@@ -19,7 +19,9 @@ function Toolbar (props) {
   return (
     <header className={classes.Toolbar}>
       <nav className={`${classes.Navbar} ${isHidden} navbar navbar-expand-md navbar-collapse`} id="navbarSupportedContent">
-        <Avatar src="/broken-image.jpg" />
+        <button className={classes.NoButton}  onClick={() => props.profileOverviewToggle()}>
+          <Avatar src="/broken-image.jpg" />
+        </button>
         <NavigationItems onChange={toggleNav} />
       </nav>
 
