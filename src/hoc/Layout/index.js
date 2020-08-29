@@ -13,7 +13,7 @@ class Layout extends Component {
     };
   };
 
-  toggleHandler = () => {
+  toggleHandler = (hideOverview) => {
     this.setState({showOverview: !this.state.showOverview});
   }
 
@@ -21,13 +21,13 @@ class Layout extends Component {
   render() {
     const ContainerStyle = {
       left: this.state.showOverview ? '75%' : '0%',
-      'border-radius': this.state.showOverview ? '40px' : '0',
+      borderRadius: this.state.showOverview ? '40px' : '0',
       transform: `scale(${this.state.showOverview ? .85 : 1})`
     };
     return(
       <div className={Classes.Root}>
         <ProfileOverview showOverview={this.state.showOverview} />
-        <div className={Classes.Container} style={ContainerStyle}>
+        <div className={Classes.Container} style={ContainerStyle}   onClick={() => this.toggleHandler(true)}>
           <Toolbar {...this.props} profileOverviewToggle={this.toggleHandler} />
           <main className={Classes.Content}>
             {this.props.children}

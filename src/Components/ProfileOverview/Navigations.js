@@ -4,8 +4,9 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
-import InboxIcon from '@material-ui/icons/Inbox';
-import DraftsIcon from '@material-ui/icons/Drafts';
+import FeedbackIcon from '@material-ui/icons/Feedback';
+import PersonIcon from '@material-ui/icons/Person';
+import HomeIcon from '@material-ui/icons/Home';
 
 export default function SelectedListItem() {
   const classes = {};
@@ -24,9 +25,9 @@ export default function SelectedListItem() {
           onClick={(event) => handleListItemClick(event, 0)}
         >
           <ListItemIcon>
-            <InboxIcon />
+            <HomeIcon />
           </ListItemIcon>
-          <ListItemText primary="Inbox" />
+          <ListItemText primary="Home" />
         </ListItem>
         <ListItem
           button
@@ -34,9 +35,9 @@ export default function SelectedListItem() {
           onClick={(event) => handleListItemClick(event, 1)}
         >
           <ListItemIcon>
-            <DraftsIcon />
+            <PersonIcon />
           </ListItemIcon>
-          <ListItemText primary="Drafts" />
+          <ListItemText primary="Profile" />
         </ListItem>
       </List>
       <Divider />
@@ -46,7 +47,10 @@ export default function SelectedListItem() {
           selected={selectedIndex === 2}
           onClick={(event) => handleListItemClick(event, 2)}
         >
-          <ListItemText primary="Trash" />
+          <ListItemIcon>
+            <FeedbackIcon />
+          </ListItemIcon>
+          <ListItemText primary="Feedback" />
         </ListItem>
         <ListItem
           button

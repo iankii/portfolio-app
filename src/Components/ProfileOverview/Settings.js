@@ -1,27 +1,16 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import ListItemText from '@material-ui/core/ListItemText';
-import ListSubheader from '@material-ui/core/ListSubheader';
 import Switch from '@material-ui/core/Switch';
 import WifiIcon from '@material-ui/icons/Wifi';
 import BluetoothIcon from '@material-ui/icons/Bluetooth';
 
 import Classes from './index.css';
-// const useStyles = makeStyles((theme) => ({
-//   root: {
-//     width: '100%',
-//     maxWidth: 360,
-//     backgroundColor: theme.palette.background.paper,
-//   },
-// }));
 
-export default function SwitchListSecondary(props) {
-//   const classes = useStyles();
-  const {toggleView} = props;
+export default function SwitchListSecondary() {
   const classes = {};
   const [checked, setChecked] = React.useState(['wifi']);
 
@@ -39,7 +28,6 @@ export default function SwitchListSecondary(props) {
   };
 
   return (
-    // <List subheader={<ListSubheader>Settings</ListSubheader>} className={classes.root}>
     <List className={classes.root}>
       <ListItem>
         <ListItemIcon>
