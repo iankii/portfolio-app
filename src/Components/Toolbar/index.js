@@ -18,10 +18,10 @@ function Toolbar (props) {
   
   return (
     <header className={classes.Toolbar}>
+      <button className={classes.NoButton}  onClick={() => props.profileOverviewToggle()}>
+        <Avatar src="/broken-image.jpg" />
+      </button>
       <nav className={`${classes.Navbar} ${isHidden} navbar navbar-expand-md navbar-collapse`} id="navbarSupportedContent">
-        <button className={classes.NoButton}  onClick={() => props.profileOverviewToggle()}>
-          <Avatar src="/broken-image.jpg" />
-        </button>
         <NavigationItems onChange={toggleNav} />
       </nav>
 
