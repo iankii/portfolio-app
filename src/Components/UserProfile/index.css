@@ -11,11 +11,10 @@
   border: 1px solid gray;
 }
 
-.Avatar {
-  height: 170px;
-  width: 150px;
+.CustomAvatar {
+  height: 130px !important;
+  width: 110px !important;
   border: 2px solid wheat;
-  border-radius: 50%;
 }
 
 .SocialLinks {

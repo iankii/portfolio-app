@@ -4,6 +4,7 @@ import classes from './ChartBar.css';
 
 const Chartbar = ({animate, name, percentage}) => {
   const animateWidth = animate ? percentage : '0%';
+  // const animateWidth = percentage;
   return (
     <div className={`${classes.SkillContainer}`}>
       <div className={classes.titles}>

@@ -1,12 +1,15 @@
 import React from 'react';
 
+import Avatar from './../Avatar';
+
 import classes from './index.css';
 
 const Profile = () => {
   return (
     <div className={classes.ProfileContainer}>
       <div className={classes.ProfileAvatar}>
-        <div className={classes.Avatar}>New Avatar</div>
+        <Avatar CustomClass={classes.CustomAvatar} />
+        {/* <div className={classes.CustomAvatar}>New Avatar</div> */}
         <div className={classes.SocialLinks}>
           <div className={classes.SocialLink + ' fa fa-google'}>
           </div>
@@ -20,17 +23,17 @@ const Profile = () => {
       </div>
       <div className={classes.ProfileDetails}>
         <div>
-          <input type="text" placeholder="First Name" defaultValue="Ankit" />
-          <input type="text" placeholder="Last Name" defaultValue="Pal" />
+          <input type="text" placeholder="First Name" defaultValue="FirstName" />
+          <input type="text" placeholder="Last Name" defaultValue="LastName" />
         </div>
         <div>
-          <input type="text" placeholder="Email Id" defaultValue="ankit.pal@gmail.com" />
+          <input type="text" placeholder="Email Id" defaultValue="test@testing.com" />
         </div>
         <div>
-          <input type="text" placeholder="Conatct Number" defaultValue="9457380534" />
+          <input type="text" placeholder="Conatct Number" defaultValue="9874561230" />
         </div>
         <div>
-          <textarea name="Summary" id="summary" cols="30" rows="5" placeholder="Write some resume summary" defaultValue="Summary"></textarea>
+          <textarea name="Summary" id="summary" cols="30" rows="5" placeholder="Write some resume summary" defaultValue="Development, Stiil in progress...;)"></textarea>
         </div>
         <div>
           Qualifications

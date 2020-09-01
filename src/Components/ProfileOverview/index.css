@@ -29,3 +29,11 @@
 .Slider {
     left: 55%;
 }
+
+.NavigationItem a:hover,
+.NavigationItem a:active,
+.NavigationItem a.active {
+  border-bottom: 4px solid #40A4C8;
+  -webkit-text-fill-color: #fff;
+  background: #201c29;
+}

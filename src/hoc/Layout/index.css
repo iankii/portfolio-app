@@ -22,7 +22,7 @@
 }
 
 .Root {
-  position: absolute;
+  /* position: absolute; */
   overflow: hidden;
   max-width: -webkit-fill-available;
   max-height: -webkit-fill-available;

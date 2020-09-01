@@ -12,6 +12,8 @@ import Avatar from './../Avatar';
 import Settings from './Settings';
 import Navigations from './Navigations';
 
+import { doSignOut } from "../../helpers/auth";
+
 import Classes from './index.css';
 
 class ProfileOverview extends Component {
@@ -25,6 +27,18 @@ class ProfileOverview extends Component {
   toggleView = () => {
     this.setState({isNavigations: !this.state.isNavigations});
   }
+
+  
+  logOutUser = (props) => {
+    const appTokenKey = "appToken";
+    this.props.hideOverview(undefined, undefined, true);
+    doSignOut()
+      .then(() => {
+        console.log('logout!!!');
+        localStorage.setItem(appTokenKey, null);
+      });
+
+  };
 
   render() {
     return (
@@ -47,12 +61,14 @@ class ProfileOverview extends Component {
                     Settings
                   </Paper>
                 }
-                <Paper
+
+                {this.props.authenticated ? <Paper
                    className={Classes.paperInheritBackground}
+                   onClick={this.logOutUser}
                 >
                   <ExitToAppIcon />
                   Logout
-                </Paper>
+                </Paper> : null}
               </Grid>
           </Grid>
           </Grid>
@@ -60,7 +76,7 @@ class ProfileOverview extends Component {
         <Divider className={Classes.divider} />
         <div className={Classes.Container}>
             <Slide  className={Classes.Container} direction="left" in={this.state.isNavigations} mountOnEnter unmountOnExit>
-              <Navigations />
+              <Navigations hideOverview={this.props.hideOverview} />
             </Slide>
             <Slide direction="right" in={!this.state.isNavigations} mountOnEnter unmountOnExit>
               <Settings toggleView={this.toggleView} />

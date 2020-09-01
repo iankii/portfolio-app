@@ -13,8 +13,14 @@ class Layout extends Component {
     };
   };
 
-  toggleHandler = (hideOverview) => {
-    this.setState({showOverview: !this.state.showOverview});
+  toggleHandler = (e, buttonClick, hideOverview) => {
+    if (hideOverview) {
+      this.setState({showOverview: false});
+    } else if (buttonClick || (!buttonClick && this.state.showOverview)) {
+      this.setState({showOverview: !this.state.showOverview});
+    }
+
+    e && e.stopPropagation();
   }
 
   
@@ -26,8 +32,8 @@ class Layout extends Component {
     };
     return(
       <div className={Classes.Root}>
-        <ProfileOverview showOverview={this.state.showOverview} />
-        <div className={Classes.Container} style={ContainerStyle}   onClick={() => this.toggleHandler(true)}>
+        <ProfileOverview showOverview={this.state.showOverview} authenticated={this.props.authenticated} hideOverview={this.toggleHandler}/>
+        <div className={Classes.Container} style={ContainerStyle}   onClick={(e) => this.toggleHandler(e)}>
           <Toolbar {...this.props} profileOverviewToggle={this.toggleHandler} />
           <main className={Classes.Content}>
             {this.props.children}

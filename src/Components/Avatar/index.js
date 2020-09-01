@@ -4,10 +4,10 @@ import DefaulImage from './../../assets/images/DefaultAvatar.PNG';
 
 import Classes from './index.css';
 
-function AvatarIcon() {
+function AvatarIcon({CustomClass}) {
   return (
     <div className={Classes.Avatar}>
-      <Avatar src={DefaulImage} />
+      <Avatar src={DefaulImage} className={CustomClass} />
     </div>
   );
 }

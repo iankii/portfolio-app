@@ -5,9 +5,9 @@ import ChartBar from '../../../UtilityComponents/Chartbar/ChartBar';
 import classes from './Professional.css';
 
 
-const professional = ({animate}) => {
+const professional = ({animate, setAimations}) => {
  return (
-  <div className={`${classes.Professional} professional`} >
+  <div className={`${classes.Professional} professional`} onMouseOver={setAimations} >
     <h2>
       <span className={classes.ProfileIndex}>01 </span>
       <span className="">PROFESSIONAL</span>
