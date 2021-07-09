@@ -18,7 +18,7 @@ import config from './config';
 
 const TopicList = () => {
   const [state, setState] = React.useState({
-    top: false,
+    // top: false,
     left: false,
     bottom: false,
     right: false,
