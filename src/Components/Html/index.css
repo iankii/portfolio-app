@@ -1,0 +1,23 @@
+.list {
+ width: 250;
+}
+.fullList {
+ width: 'auto';
+}
+
+.topicButton {
+    background-color:lightgray;
+}
+@media only screen and (max-width: 600px) {
+    .topicButton {
+        width: 200px;
+        /* height: auto; */
+        background: darkgray;
+        padding: 10px;
+    }
+    .buttonContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

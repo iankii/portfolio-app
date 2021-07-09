@@ -1,0 +1,19 @@
+
+.techStack, .subStack {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.dashboardHeader {
+  /* font-family: fantasy; */
+  text-align: center;
+  width: 100%;
+}
+
+.active {
+  font-style: italic;
+  font-weight: bold;
+  text-decoration: underline;
+}

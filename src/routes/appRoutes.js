@@ -3,7 +3,10 @@ const Routes = {
   'REGISTER': '/register',
   'LOGIN': '/login',
   'PROFILE': '/profile',
-  'CREATE_PROFILE': '/create-profile'
+  'CREATE_PROFILE': '/create-profile',
+  'HTML': '/frontend/html',
+  'CSS': '/frontend/css',
+  'JS': '/frontend/javascript',
 };
 
 // import MyProfile from '../app-modules/my-profile/index';

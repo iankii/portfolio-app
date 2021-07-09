@@ -14,6 +14,8 @@ import ProtectedRoute from './hoc/ProtectedRoute/ProtectedRoute';
 import ProfileCreater from './Components/ProfileCreater/index';
 import Profile from './Components/UserProfile/index';
 import Mappers from "./ConnectMappers/ConnectMappers";
+import PageNotFound from './Components/PageNotFound';
+import Html from './Components/Html';
 
 import './App.css';
 
@@ -50,8 +52,11 @@ class App extends Component {
           <Route path={Routes.REGISTER} component={Register} />
           <Route path={Routes.LOGIN} component={Login} />
           <Route path={Routes.PROFILE} component={Profile} />
+          <Route path={Routes.HTML} component={Html} />
+          <Route path={Routes.CSS} component={PageNotFound} />
+          <Route path={Routes.JS} component={PageNotFound} />
           <ProtectedRoute authenticated={authenticated} path={Routes.CREATE_PROFILE} component={ProfileCreater} />
-          <Route exact path='/' authenticated={authenticated} component={Dashboard} />
+          <Route path='/' authenticated={authenticated} component={Dashboard} />
         </Switch>
       </Layout>
     );

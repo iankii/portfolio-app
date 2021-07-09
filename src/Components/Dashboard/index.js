@@ -6,12 +6,12 @@ import classes from './index.css';
 
 import TutorialsTickets from '../TutorialsTickets/index';
 import MiniCards from '../MiniCards/index';
-import DashboardHeader from "./templates/dashboardHeader";
+import DashboardHeader from "./../DashboardHeader";
 
 // {props.authenticated ? <h1> authenticated</h1> : <h1>not authenticated</h1>}
 const Dashboard = (props) => {
   return (<div className={classes.Dashboard}>
-    <DashboardHeader />
+    <DashboardHeader {...props} />
     <TutorialsTickets />
     <div className={classes.ResumeBuilderLink}>
       <NavLink exact={props.exact} to='/create-profile' activeClassName={classes.active}>Checkout our Resume Builder!!!</NavLink>
