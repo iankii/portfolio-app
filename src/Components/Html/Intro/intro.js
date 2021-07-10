@@ -9,9 +9,9 @@ const intro = () => {
       <Header />
       <div>
         <h2 className={Style.heading}>What is HTML?</h2>
-        <span>Hyper Text Markup Language. Huh, i think you already knew. So what?😏 So, first lets' see some basics.</span>
-        <span>Basically, it's used to define the strictures of the website with the help of CSS which we are going to learn after this. It was created by Tim Berners-Lee and Robert Cailliau woth their friends in 1989</span>
-        <span>Latest versionis HTML5. </span>
+        <span><b>Hyper Text Markup Language</b>. Huh, i think you already knew. So what?😏 So, first lets' see some basics.</span>
+        <span>Basically, it's used to define the structures of the website with the help of CSS which we are going to learn later. HTML was created by <b>Tim Berners-Lee</b> and <b>Robert Cailliau</b> with their friends in 1989.</span>
+        <span>Latest versionis is <b>HTML5</b>. </span>
         <h2 className={Style.heading}>Some Basic keywords to know😉 => </h2>
         <span><b>Tags</b> are like building blocks for HTML. Eg. div, span, input. If you open any website/page in dev mode, you'll see lots of these tags in 'Elements" tab/</span>
         <span><b>Attributes</b> are like some additional data passed to any tag which can be retrievedand used to perform some functionality</span>
