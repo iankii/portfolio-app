@@ -16,6 +16,8 @@ import Profile from './Components/UserProfile/index';
 import Mappers from "./ConnectMappers/ConnectMappers";
 import PageNotFound from './Components/PageNotFound';
 import Html from './Components/Html';
+import SubStack from './Components/DashboardHeader/SubStack';
+import Intro from './Components/Html/Intro/intro';
 
 import './App.css';
 
@@ -52,9 +54,10 @@ class App extends Component {
           <Route path={Routes.REGISTER} component={Register} />
           <Route path={Routes.LOGIN} component={Login} />
           <Route path={Routes.PROFILE} component={Profile} />
-          <Route path={Routes.HTML} component={Html} />
+          <Route path={Routes.HTML} component={Html} exact />
           <Route path={Routes.CSS} component={PageNotFound} />
           <Route path={Routes.JS} component={PageNotFound} />
+          <Route path='/frontend/html/intro' component={Intro} />
           <ProtectedRoute authenticated={authenticated} path={Routes.CREATE_PROFILE} component={ProfileCreater} />
           <Route path='/' authenticated={authenticated} component={Dashboard} />
         </Switch>

@@ -8,6 +8,13 @@
 .topicButton {
     background-color:lightgray;
 }
+
+
+.heading {
+    margin-top: 50px;
+}
+
+
 @media only screen and (max-width: 600px) {
     .topicButton {
         width: 200px;

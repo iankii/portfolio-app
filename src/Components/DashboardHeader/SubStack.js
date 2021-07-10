@@ -4,23 +4,18 @@ import config from './config';
 import Classes from './index.css';
 
 const SubStack = ({match}) => {
-  const {path, url} = useRouteMatch;
-  console.log('>>>>>>>>>>>', path, url);
   const href = window.location.href;
   console.log(href);
   const subStacks = [];
 
   if (href.search('frontend') >= 0) {
-    console.log('Display frontend course Header');
     subStacks.push(...config.frontend);
-  }
-  if (href.search('backend') >= 0) {
-    console.log('Display backend course Header');
+  } else if (href.search('backend') >= 0) {
     subStacks.push(...config.backend);
-  }
-  if (href.search('devops') >= 0) {
-    console.log('Display DevOps course Header');
+  } else if (href.search('devops') >= 0) {
     subStacks.push(...config.devops);
+  } else {
+    return null;
   }
 
   return (

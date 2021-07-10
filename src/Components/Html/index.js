@@ -1,7 +1,6 @@
 import React from 'react';
-
-import { withRouter, Route, Switch } from 'react-router-dom';
 import DashboardHeader from './../DashboardHeader';
+import Dashboard from './../Dashboard';
 import TopicList from './TopicList';
 
 // import { NavLink } from 'react-router-dom';
@@ -11,8 +10,8 @@ import TopicList from './TopicList';
 const Html = (props) => {
   return (
     <div className="html">
-      <DashboardHeader />
-      <TopicList />
+      <TopicList {...props}/>
+      <Dashboard />
 
     </div>
   );

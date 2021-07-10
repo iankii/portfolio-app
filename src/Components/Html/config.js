@@ -1,5 +1,9 @@
 const config = {
-    htmlTopics: ['Introduction', 'Basics', 'Elements', 'Attributes', 'Headings', 'Paragraphs', 'Styles'],
+    htmlTopics: [{
+        id: 'intro',
+        title: 'Introduction',
+        path: 'intro'
+    }, 'Basics', 'Elements', 'Attributes', 'Headings', 'Paragraphs', 'Styles'],
     advanceHtmlTopic: ['Forms', 'Graphics', 'Media', 'APIs', 'Extras...']
 };
 
