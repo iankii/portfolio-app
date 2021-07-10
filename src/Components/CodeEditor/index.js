@@ -8,13 +8,12 @@ const CodeEditor = () => {
   useEffect(() => {
     const first = document.querySelector(".editor-input");
     const iframe = document.querySelector(".editor-output");
-    const btn = document.querySelector(".btn");
+    const btn = document.querySelector(`.${Style.btn}`);
     btn.addEventListener("click", () => {
       var html = first.textContent;
       iframe.src = "data:text/html;charset=utf-8," + encodeURI(html);
     });
-  
-  
+    
     first.addEventListener('keyup',()=>{
       var html = first.textContent;
       iframe.src = "data:text/html;charset=utf-8," + encodeURI(html);
@@ -28,10 +27,16 @@ const CodeEditor = () => {
   }, []);
   
 
+  // const onClick = () => {
+  //   var html = first.textContent;
+  //   iframe.src = "data:text/html;charset=utf-8," + encodeURI(html);
+  // }
+
+
   return (
-    <div class={`main-editor ${Style.mainEditor}`}>
-      <button class={Style.btn}><PlayCircleFilledIcon />Click to Run</button>
-      <div  class={`editor-input ${Style.editorInput}`} contentEditable>{
+    <div className={`main-editor ${Style.mainEditor}`}>
+      <button className={Style.btn} ><PlayCircleFilledIcon />Click to Run</button>
+      <div  className={`editor-input ${Style.editorInput}`} contentEditable>{
         "<!DOCTYPE html> \
         <html> \
           <body> \
@@ -40,7 +45,7 @@ const CodeEditor = () => {
         </html>\
         "
       }</div>
-      <iframe class={`editor-output ${Style.editorOutput}`} >
+      <iframe className={`editor-output ${Style.editorOutput}`} >
       </iframe>
     </div>
   );
