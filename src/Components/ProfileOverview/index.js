@@ -34,7 +34,6 @@ class ProfileOverview extends Component {
     this.props.hideOverview(undefined, undefined, true);
     doSignOut()
       .then(() => {
-        console.log('logout!!!');
         localStorage.setItem(appTokenKey, null);
       });
 

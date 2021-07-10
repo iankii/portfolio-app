@@ -5,7 +5,6 @@ import Classes from './index.css';
 
 const SubStack = ({match}) => {
   const href = window.location.href;
-  console.log(href);
   const subStacks = [];
 
   if (href.search('frontend') >= 0) {

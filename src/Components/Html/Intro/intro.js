@@ -4,6 +4,14 @@ import Editor from './../../CodeEditor';
 import Style from './../index.css';
 
 const intro = () => {
+  // eslint-disable-next-line no-multi-str
+  const codeForEditor =  "<!DOCTYPE html> \
+                          <html> \
+                            <body> \
+                              <p>This Demo text. Feel free to change and play with it.</p>\
+                            </body>\
+                          </html>\
+                          ";
   return (
     <>
       <Header />
@@ -18,7 +26,7 @@ const intro = () => {
         <h2 className={Style.heading}>Prerequisites😯</h2>
         <span>Dont worry, you just install any <b>BROWSER</b> and an editor and stay with us. I personally use <b>VS Code</b> as editor but hey, If you dont have any editor then you can use Notepad as well for HTML.</span>
         <span>Dont have that also😑, we got your back, you can use following editor to play with HTML for sometime...😀</span>
-        <Editor />
+        <Editor code={codeForEditor} />
       </div>
     </>
   );

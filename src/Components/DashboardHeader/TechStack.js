@@ -5,10 +5,7 @@ import classes from './index.css';
 
 const TechStack = ({match}) => {
   const {path, url} = useRouteMatch;
-  console.log('>>>>>>>>>>>', path, url);
-  const onChange = (e) => {
-    console.log(match, path, url);
-  }
+  const onChange = (e) => {}
 
   return (
     <>

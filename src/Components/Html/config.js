@@ -3,7 +3,17 @@ const config = {
         id: 'intro',
         title: 'Introduction',
         path: 'intro'
-    }, 'Basics', 'Elements', 'Attributes', 'Headings', 'Paragraphs', 'Styles'],
+    }, {
+        id: 'basics',
+        title: 'Basics',
+        path: 'basics'
+    }, 'Elements', 'Attributes', 'Headings', 'Paragraphs', 'Styles',
+    {
+        id: 'editor',
+        title: 'Editor',
+        path: 'editor'
+    }
+],
     advanceHtmlTopic: ['Forms', 'Graphics', 'Media', 'APIs', 'Extras...']
 };
 

@@ -2,10 +2,7 @@ import React, {useState} from 'react';
 import { withRouter, Route, Switch, NavLink, useRouteMatch } from 'react-router-dom';
 import clsx from 'clsx';
 import { withTheme } from '@material-ui/styles';
-import { makeStyles } from '@material-ui/core/styles';
-import ListIcon from '@material-ui/icons/List';
 import Drawer from '@material-ui/core/Drawer';
-import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
@@ -14,13 +11,12 @@ import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import classes from './index.css';
-// import Dashboard from './../Dashboard';
-import Intro from './Intro/intro'
+import Intro from './Intro/intro';
+import Basics from './Basics';
 
 import config from './config';
 
 const TopicList = ({match}) => {
-  console.log('<<<>>>>>>>>>>>', match);
   const [isBack, setBack] = useState(true);  
   const [state, setState] = useState({
     // top: false,
@@ -29,17 +25,11 @@ const TopicList = ({match}) => {
     right: false,
   });
 
-  const listItemClicked = () => {
-    console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>');
-    setBack(false);
-  }
-
   const toggleDrawer = (anchor, open) => (event) => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
       return;
     }
 
-    console.log(open, isBack);
     // close on back nav or vice versa
     if (!open && isBack) {
       window.history.back();
@@ -97,11 +87,12 @@ const TopicList = ({match}) => {
         </React.Fragment>
       ))}
       
-      <Switch>
-        <Route path='/frontend/html/intro' component={Intro} exact />
+      {/* <Switch>
+        <Route path='/frontend/html/basics' component={Intro} exact />
+        <Route path='/frontend/html/intro' component={Basics} exact /> */}
         {/* <Route path='/backend' component={SubStack} />
         <Route path='/devops' component={SubStack} /> */}
-      </Switch>
+      {/* </Switch> */}
     </div>
   );
 }
